@@ -24,6 +24,7 @@
     "@angular/platform-browser": "~9.1.11",
     "@angular/platform-browser-dynamic": "~9.1.11",
     "@angular/router": "~9.1.11",
+    "angular-epic-spinners": "^2.0.0",
     "firebase": "^7.13.1",
     "ngx-auth-firebaseui": "^4.4.0",
     "rxjs": "~6.5.4",
