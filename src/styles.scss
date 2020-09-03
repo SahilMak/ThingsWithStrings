@@ -1,8 +1,19 @@
-$primary-color: #e6240e;
-$secondary-color: #240ee6;
-$tertiary-color: #0ed0e6;
-$dark-color: #141414;
-$light-color: #ebebeb;
+$light: #fafafa;
+$dark: #212121;
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+
+  a:hover {
+    color: #28c6c6;
+  }
+
+  a:visited {
+    color: #938628;
+  }
+}
