@@ -33,7 +33,7 @@
               }
             ],
             "styles": [
-              "./node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "src/app-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
