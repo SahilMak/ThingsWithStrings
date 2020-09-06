@@ -2,9 +2,10 @@
   "name": "things-with-strings",
   "version": "0.0.0",
   "scripts": {
+    "config": "ts-node set-env.ts",
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "npm run config && ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
