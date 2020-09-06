@@ -1,4 +1,5 @@
-import {writeFile} from 'fs';
+const fs = require('fs');
+const writeFile = fs.writeFile;
 
 const targetPath = './src/environments/environment.prod.ts';
 
