@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
-import { firebaseConfig } from '../firebase/firebase.conf';
+import { environment } from '../environments/environment';
 
 
 @NgModule({
@@ -17,11 +17,11 @@ import { firebaseConfig } from '../firebase/firebase.conf';
   ],
   imports: [
     BrowserModule,
-    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
     BrowserAnimationsModule,
     HeaderModule,
-    NgxAuthFirebaseUIModule.forRoot(firebaseConfig),
+    NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     FooterModule
   ],
   providers: [],
