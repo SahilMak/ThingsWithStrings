@@ -1,3 +1,5 @@
+@import './app-theme.scss';
+
 $light: #fafafa;
 $dark: #212121;
 
@@ -9,11 +11,17 @@ body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
-  a:hover {
-    color: #28c6c6;
-  }
+  a {
+    color: $light;
+    font-weight: bold;
+    text-decoration: none;
 
-  a:visited {
-    color: #938628;
+    &:hover {
+      color: #28c6c6;
+    }
+
+    &:visited {
+      color: #938628;
+    }
   }
 }
