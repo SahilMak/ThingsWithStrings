@@ -1,0 +1,10 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span>Things With Strings</span>
+    <span fxFlex="1 1 auto"></span>
+    <div *ngFor="let value of categories; first as isFirst; last as isLast">
+      <a href="javascript:void(0)" [ngClass]="{ 'left-margin': !isFirst }">{{ value | titlecase }}</a>
+      <span [ngClass]="{ 'left-margin': !isLast }">{{ (isLast) ? '' : '|' }}</span>
+    </div>
+  </mat-toolbar-row>
+</mat-toolbar>

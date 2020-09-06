@@ -6,7 +6,10 @@ import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HeaderModule } from './header/header.module';
+import { FooterModule } from './footer/footer.module';
 import { firebaseConfig } from '../firebase/firebase.conf';
+
 
 @NgModule({
   declarations: [
@@ -17,7 +20,9 @@ import { firebaseConfig } from '../firebase/firebase.conf';
     AngularFireModule.initializeApp(firebaseConfig),
     AppRoutingModule,
     BrowserAnimationsModule,
-    NgxAuthFirebaseUIModule.forRoot(firebaseConfig)
+    HeaderModule,
+    NgxAuthFirebaseUIModule.forRoot(firebaseConfig),
+    FooterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
