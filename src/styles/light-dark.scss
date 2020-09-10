@@ -1,2 +1,8 @@
+@import '../app/header/header.component.scss';
+
 $light: #fafafa;
 $dark: #303030;
+
+@mixin light-dark($color) {
+  @include header-theme($color);
+}
