@@ -1,13 +1,16 @@
 import { AngularFireModule } from '@angular/fire';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { CoreModule } from '../app/core/core.module';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
+import { SharedModule } from '../app/shared/shared.module';
 import { environment } from '../environments/environment';
 
 
@@ -20,9 +23,12 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
     BrowserAnimationsModule,
+    CoreModule,
     HeaderModule,
+    FormsModule,
     NgxAuthFirebaseUIModule.forRoot(environment.firebase),
-    FooterModule
+    FooterModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

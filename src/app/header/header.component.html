@@ -1,15 +1,15 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
-    <span>Things With Strings</span>
+    <span class="toggled-color">Things With Strings</span>
     <div fxLayout="row">
       <div *ngFor="let value of categories; first as isFirst; last as isLast">
-        <a mat-button href="javascript:void(0)" [ngClass]="{ 'left-margin': !isFirst }">{{ value | titlecase }}</a>
-        <span [ngClass]="{ 'left-margin': !isLast }">{{ (isLast) ? '' : '|' }}</span>
+        <a mat-button href="javascript:void(0)" class="toggled-color" [ngClass]="{ 'left-margin': !isFirst }">{{ value | titlecase }}</a>
+        <span class="toggled-color" [ngClass]="{ 'left-margin': !isLast }">{{ (isLast) ? '' : '|' }}</span>
       </div>
     </div>
   </mat-toolbar-row>
   <mat-toolbar-row>
-    <mat-form-field id="search-form">
+    <mat-form-field class="toggled-color" id="search-form">
       <input type="search" matInput placeholder="Search">
       <button mat-icon-button matSuffix>
         <mat-icon>search</mat-icon>
@@ -18,11 +18,14 @@
     <div class="flex-container" fxLayoutAlign="space-between"></div>
     <div>
       <button mat-icon-button class="left-margin">
-        <mat-icon>person</mat-icon>
+        <mat-icon class="toggled-color">person</mat-icon>
       </button>
-      <button mat-icon-button class="left-margin">
-        <mat-icon>settings</mat-icon>
+      <button mat-icon-button class="left-margin" [matMenuTriggerFor]="settings">
+        <mat-icon class="toggled-color">settings</mat-icon>
       </button>
+      <mat-menu #settings="matMenu">
+        <mat-slide-toggle color="accent" (change)="toggleTheme($event)">{{ isDarkOn ? 'Dark' : 'Light' }}</mat-slide-toggle>
+      </mat-menu>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>

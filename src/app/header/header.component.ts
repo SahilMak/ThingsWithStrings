@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { Categories } from '../shared/constants/strings';
+import { DarkModeService } from '../core/services/dark-mode.service';
 
 
 @Component({
@@ -11,12 +12,18 @@ import { Categories } from '../shared/constants/strings';
 export class HeaderComponent implements OnInit {
 
   categories: string[];
+  isDarkOn = false;
 
-  constructor() {
+  constructor(private darkModeService: DarkModeService) {
     this.categories = Categories;
   }
 
   ngOnInit(): void {
+  }
+
+  toggleTheme(event) {
+    this.darkModeService.isDarkOn.next(event.checked);
+    this.isDarkOn = event.checked;
   }
 
 }
