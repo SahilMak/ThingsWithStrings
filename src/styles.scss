@@ -1,7 +1,7 @@
 @import './styles/app-theme.scss';
+@import './styles/light-dark.scss';
 
-$light: #fafafa;
-$dark: #212121;
+$hover: #28c6c6;
 
 html, body {
   height: 100%;
@@ -17,12 +17,16 @@ body {
     text-decoration: none;
 
     &:hover {
-      color: #28c6c6;
+      color: $hover;
     }
 
     &:visited {
       color: #938628;
     }
+  }
+
+  mat-icon:hover {
+    color: $hover;
   }
 
   .clickable {
