@@ -12,4 +12,11 @@ $light-theme: mat-light-theme($light-primary, $light-accent, $theme-warn);
 $dark-theme: mat-dark-theme($dark-primary, $dark-accent, $theme-warn);
 
 @include angular-material-theme($light-theme);
-@include angular-material-theme($dark-theme);
+$primary: mat-color($light-primary);
+$accent: mat-color($light-accent);
+
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+  $primary: mat-color($dark-primary);
+  $accent: mat-color($dark-accent);
+}
