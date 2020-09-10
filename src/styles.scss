@@ -1,7 +1,6 @@
-@import './app-theme.scss';
+@import './styles/app-theme.scss';
 
-$light: #fafafa;
-$dark: #212121;
+$hover: #28c6c6;
 
 html, body {
   height: 100%;
@@ -12,16 +11,20 @@ body {
   font-family: Roboto, "Helvetica Neue", sans-serif;
 
   a {
-    color: $light;
+    color: $accent !important;
     font-weight: bold;
     text-decoration: none;
 
     &:hover {
-      color: #28c6c6;
+      color: $hover;
     }
 
     &:visited {
       color: #938628;
     }
+  }
+
+  .clickable {
+    cursor: pointer;
   }
 }

@@ -1,7 +1,18 @@
+@mixin header-theme($color) {
+  a, input, mat-form-field, mat-icon, span {
+    color: $color;
+  }
+}
+
 mat-toolbar-row {
-  padding: 0 40px;
+  padding: 0 20%;
+  place-content: stretch space-between;
 
   .left-margin {
     margin-left: 20px;
+  }
+
+  #search-form {
+    width: 100%;
   }
 }

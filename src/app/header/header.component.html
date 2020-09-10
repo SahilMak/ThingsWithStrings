@@ -1,10 +1,28 @@
 <mat-toolbar color="primary">
   <mat-toolbar-row>
     <span>Things With Strings</span>
-    <span fxFlex="1 1 auto"></span>
-    <div *ngFor="let value of categories; first as isFirst; last as isLast">
-      <a href="javascript:void(0)" [ngClass]="{ 'left-margin': !isFirst }">{{ value | titlecase }}</a>
-      <span [ngClass]="{ 'left-margin': !isLast }">{{ (isLast) ? '' : '|' }}</span>
+    <div fxLayout="row">
+      <div *ngFor="let value of categories; first as isFirst; last as isLast">
+        <a mat-button href="javascript:void(0)" [ngClass]="{ 'left-margin': !isFirst }">{{ value | titlecase }}</a>
+        <span [ngClass]="{ 'left-margin': !isLast }">{{ (isLast) ? '' : '|' }}</span>
+      </div>
+    </div>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <mat-form-field id="search-form">
+      <input type="search" matInput placeholder="Search">
+      <button mat-icon-button matSuffix>
+        <mat-icon>search</mat-icon>
+      </button>
+    </mat-form-field>
+    <div class="flex-container" fxLayoutAlign="space-between"></div>
+    <div>
+      <button mat-icon-button class="left-margin">
+        <mat-icon>person</mat-icon>
+      </button>
+      <button mat-icon-button class="left-margin">
+        <mat-icon>settings</mat-icon>
+      </button>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
