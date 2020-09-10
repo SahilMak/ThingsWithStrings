@@ -1,6 +1,6 @@
 @mixin header-theme($color) {
-  a, input, mat-form-field, mat-icon, span {
-    color: $color;
+  .toggled-color {
+    color: $color !important;
   }
 }
 
