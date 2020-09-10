@@ -33,7 +33,7 @@
               }
             ],
             "styles": [
-              "src/app-theme.scss",
+              "src/styles/app-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -98,7 +98,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/app-theme.scss",
+              "src/styles/app-theme.scss",
               "src/styles.scss"
             ],
             "scripts": []

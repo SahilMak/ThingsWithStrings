@@ -1,4 +1,4 @@
-@import './app-theme.scss';
+@import './styles/app-theme.scss';
 
 $light: #fafafa;
 $dark: #212121;
@@ -23,5 +23,9 @@ body {
     &:visited {
       color: #938628;
     }
+  }
+
+  .clickable {
+    cursor: pointer;
   }
 }
