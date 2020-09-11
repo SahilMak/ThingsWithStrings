@@ -20,12 +20,9 @@
       <button mat-icon-button class="left-margin">
         <mat-icon class="toggled-color">person</mat-icon>
       </button>
-      <button mat-icon-button class="left-margin" [matMenuTriggerFor]="settings">
-        <mat-icon class="toggled-color">settings</mat-icon>
+      <button mat-icon-button class="left-margin" matTooltip="Switch to {{ isDarkOn ? 'light' : 'dark' }} mode" (click)="toggleTheme()">
+        <mat-icon class="toggled-color">{{ isDarkOn ? 'bedtime' : 'wb_sunny' }}</mat-icon>
       </button>
-      <mat-menu #settings="matMenu">
-        <mat-slide-toggle color="accent" (change)="toggleTheme($event)">{{ isDarkOn ? 'Dark' : 'Light' }}</mat-slide-toggle>
-      </mat-menu>
     </div>
   </mat-toolbar-row>
 </mat-toolbar>
