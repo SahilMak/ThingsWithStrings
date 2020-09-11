@@ -21,9 +21,9 @@ export class HeaderComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  toggleTheme(event) {
-    this.darkModeService.isDarkOn.next(event.checked);
-    this.isDarkOn = event.checked;
+  toggleTheme() {
+    this.isDarkOn = !this.isDarkOn;
+    this.darkModeService.isDarkOn.next(this.isDarkOn);
   }
 
 }

@@ -8,6 +8,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     MatMenuModule,
     MatSlideToggleModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatInputModule,
     MatMenuModule,
     MatSlideToggleModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatTooltipModule
   ]
 })
 export class SharedModule { }
