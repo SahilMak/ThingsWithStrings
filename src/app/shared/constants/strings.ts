@@ -4,3 +4,9 @@ export const Categories: string[] = [
   'orchestral',
   'world'
 ];
+
+export const FooterLinks: string[] = [
+  'about',
+  'team',
+  'contact'
+];
