@@ -1,1 +1,13 @@
-<p>Footer coming soon!</p>
+<footer>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <div fxLayout="row">
+        <div *ngFor="let value of footerLinks; last as isLast">
+          <a mat-button href="javascript:void(0)" class="toggled-color" [ngClass]="{ 'right-margin': !isLast }">
+            {{ value | titlecase }}
+          </a>
+        </div>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</footer>

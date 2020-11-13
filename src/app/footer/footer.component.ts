@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { FooterLinks } from '../shared/constants/strings';
+
 @Component({
   selector: 'app-footer',
   templateUrl: './footer.component.html',
@@ -7,7 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FooterComponent implements OnInit {
 
-  constructor() { }
+  footerLinks: string[];
+
+  constructor() {
+    this.footerLinks = FooterLinks;
+  }
 
   ngOnInit(): void {
   }

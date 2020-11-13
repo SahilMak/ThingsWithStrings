@@ -1,0 +1,14 @@
+@mixin footer-theme($color) {
+  .toggled-color {
+    color: $color !important;
+  }
+}
+
+mat-toolbar-row {
+  padding: 0 20%;
+  place-content: stretch space-between;
+
+  .right-margin {
+    margin-right: 20px;
+  }
+}
