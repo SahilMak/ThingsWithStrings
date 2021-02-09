@@ -15,6 +15,7 @@ import { CheckoutModule } from './checkout/checkout.module';
 import { CoreModule } from '../app/core/core.module';
 import { GuitarModule } from './guitar/guitar.module';
 import { HeaderModule } from './header/header.module';
+import { HomeModule } from './home/home.module';
 import { FooterModule } from './footer/footer.module';
 import { OrchestralModule } from './orchestral/orchestral.module';
 import { SharedModule } from '../app/shared/shared.module';
@@ -39,6 +40,7 @@ import { environment } from '../environments/environment';
     CoreModule,
     GuitarModule,
     HeaderModule,
+    HomeModule,
     FormsModule,
     NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     FooterModule,
