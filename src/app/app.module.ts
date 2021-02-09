@@ -8,8 +8,9 @@ import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AccountModule } from './account/account.module';
-import { CoreModule } from '../app/core/core.module';
 import { BassModule } from './bass/bass.module';
+import { CoreModule } from '../app/core/core.module';
+import { GuitarModule } from './guitar/guitar.module';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 import { SharedModule } from '../app/shared/shared.module';
@@ -28,6 +29,7 @@ import { environment } from '../environments/environment';
     AccountModule,
     BassModule,
     CoreModule,
+    GuitarModule,
     HeaderModule,
     FormsModule,
     NgxAuthFirebaseUIModule.forRoot(environment.firebase),
