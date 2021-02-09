@@ -13,6 +13,11 @@
             <button mat-menu-item *ngFor="let sub of subCategories[category]">
               {{ sub | titlecase }}
             </button>
+            <button mat-menu-item>
+              <b>
+                View All
+              </b>
+            </button>
           </mat-menu>
           <span class="toggled-color" [ngClass]="{ 'left-margin': !isLast }">
             {{ (isLast) ? '' : '|' }}
