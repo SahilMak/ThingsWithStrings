@@ -9,6 +9,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AccountModule } from './account/account.module';
 import { CoreModule } from '../app/core/core.module';
+import { BassModule } from './bass/bass.module';
 import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 import { SharedModule } from '../app/shared/shared.module';
@@ -25,6 +26,7 @@ import { environment } from '../environments/environment';
     AppRoutingModule,
     BrowserAnimationsModule,
     AccountModule,
+    BassModule,
     CoreModule,
     HeaderModule,
     FormsModule,
