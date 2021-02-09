@@ -10,6 +10,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AboutUsModule } from './about-us/about-us.module';
 import { AccountModule } from './account/account.module';
 import { BassModule } from './bass/bass.module';
+import { CartModule } from './cart/cart.module';
 import { CoreModule } from '../app/core/core.module';
 import { GuitarModule } from './guitar/guitar.module';
 import { HeaderModule } from './header/header.module';
@@ -32,6 +33,7 @@ import { environment } from '../environments/environment';
     AboutUsModule,
     AccountModule,
     BassModule,
+    CartModule,
     CoreModule,
     GuitarModule,
     HeaderModule,
