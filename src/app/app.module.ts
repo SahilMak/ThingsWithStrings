@@ -7,6 +7,7 @@ import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AboutUsModule } from './about-us/about-us.module';
 import { AccountModule } from './account/account.module';
 import { BassModule } from './bass/bass.module';
 import { CoreModule } from '../app/core/core.module';
@@ -28,6 +29,7 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AppRoutingModule,
     BrowserAnimationsModule,
+    AboutUsModule,
     AccountModule,
     BassModule,
     CoreModule,
