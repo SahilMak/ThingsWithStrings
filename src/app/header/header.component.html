@@ -1,28 +1,52 @@
-<mat-toolbar color="primary">
-  <mat-toolbar-row>
-    <span class="toggled-color">Things With Strings</span>
-    <div fxLayout="row">
-      <div *ngFor="let value of categories; first as isFirst; last as isLast">
-        <a mat-button href="javascript:void(0)" class="toggled-color" [ngClass]="{ 'left-margin': !isFirst }">{{ value | titlecase }}</a>
-        <span class="toggled-color" [ngClass]="{ 'left-margin': !isLast }">{{ (isLast) ? '' : '|' }}</span>
+<header>
+  <mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span class="toggled-color">
+        Things With Strings
+      </span>
+      <div fxLayout="row">
+        <div *ngFor="let category of categories; first as isFirst; last as isLast">
+          <button mat-button class="toggled-color" [ngClass]="{ 'left-margin': !isFirst }" [matMenuTriggerFor]="navMenu">
+            {{ category | titlecase }}
+          </button>
+          <mat-menu #navMenu="matMenu">
+            <button mat-menu-item *ngFor="let sub of subCategories[category]">
+              {{ sub | titlecase }}
+            </button>
+            <button mat-menu-item>
+              <b>
+                View All
+              </b>
+            </button>
+          </mat-menu>
+          <span class="toggled-color" [ngClass]="{ 'left-margin': !isLast }">
+            {{ (isLast) ? '' : '|' }}
+          </span>
+        </div>
       </div>
-    </div>
-  </mat-toolbar-row>
-  <mat-toolbar-row>
-    <mat-form-field class="toggled-color" id="search-form">
-      <input type="search" matInput placeholder="Search">
-      <button mat-icon-button matSuffix>
-        <mat-icon>search</mat-icon>
-      </button>
-    </mat-form-field>
-    <div class="flex-container" fxLayoutAlign="space-between"></div>
-    <div>
-      <button mat-icon-button class="left-margin">
-        <mat-icon class="toggled-color">person</mat-icon>
-      </button>
-      <button mat-icon-button class="left-margin" matTooltip="Switch to {{ isDarkOn ? 'light' : 'dark' }} mode" (click)="toggleTheme()">
-        <mat-icon class="toggled-color">{{ isDarkOn ? 'bedtime' : 'wb_sunny' }}</mat-icon>
-      </button>
-    </div>
-  </mat-toolbar-row>
-</mat-toolbar>
+    </mat-toolbar-row>
+    <mat-toolbar-row>
+      <mat-form-field class="toggled-color" id="search-form">
+        <input type="search" matInput placeholder="Search">
+        <button mat-icon-button matSuffix>
+          <mat-icon>
+            search
+          </mat-icon>
+        </button>
+      </mat-form-field>
+      <div class="flex-container" fxLayoutAlign="space-between"></div>
+      <div>
+        <button mat-icon-button class="left-margin">
+          <mat-icon class="toggled-color">
+            person
+          </mat-icon>
+        </button>
+        <button mat-icon-button class="left-margin" matTooltip="Switch to {{ isDarkOn ? 'light' : 'dark' }} mode" (click)="toggleTheme()">
+          <mat-icon class="toggled-color">
+            {{ isDarkOn ? 'bedtime' : 'wb_sunny' }}
+          </mat-icon>
+        </button>
+      </div>
+    </mat-toolbar-row>
+  </mat-toolbar>
+</header>
