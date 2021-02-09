@@ -11,6 +11,7 @@ import { AboutUsModule } from './about-us/about-us.module';
 import { AccountModule } from './account/account.module';
 import { BassModule } from './bass/bass.module';
 import { CartModule } from './cart/cart.module';
+import { CheckoutModule } from './checkout/checkout.module';
 import { CoreModule } from '../app/core/core.module';
 import { GuitarModule } from './guitar/guitar.module';
 import { HeaderModule } from './header/header.module';
@@ -34,6 +35,7 @@ import { environment } from '../environments/environment';
     AccountModule,
     BassModule,
     CartModule,
+    CheckoutModule,
     CoreModule,
     GuitarModule,
     HeaderModule,
