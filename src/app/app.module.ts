@@ -15,6 +15,7 @@ import { HeaderModule } from './header/header.module';
 import { FooterModule } from './footer/footer.module';
 import { OrchestralModule } from './orchestral/orchestral.module';
 import { SharedModule } from '../app/shared/shared.module';
+import { WorldModule } from './world/world.module';
 import { environment } from '../environments/environment';
 
 
@@ -36,7 +37,8 @@ import { environment } from '../environments/environment';
     NgxAuthFirebaseUIModule.forRoot(environment.firebase),
     FooterModule,
     OrchestralModule,
-    SharedModule
+    SharedModule,
+    WorldModule
   ],
   providers: [],
   bootstrap: [AppComponent]
