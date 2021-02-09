@@ -21,6 +21,7 @@ import { OrchestralModule } from './orchestral/orchestral.module';
 import { SharedModule } from '../app/shared/shared.module';
 import { WorldModule } from './world/world.module';
 import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { environment } from '../environments/environment';
     FooterModule,
     OrchestralModule,
     SharedModule,
-    WorldModule
+    WorldModule,
+    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]
