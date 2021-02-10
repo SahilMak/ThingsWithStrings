@@ -12,7 +12,7 @@ const routes: Routes = [
   { path: 'guitar', loadChildren: () => import('./guitar/guitar.module').then(m => m.GuitarModule) },
   { path: 'orchestral', loadChildren: () => import('./orchestral/orchestral.module').then(m => m.OrchestralModule) },
   { path: 'world', loadChildren: () => import('./world/world.module').then(m => m.WorldModule) },
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '/' }
 ];
 
 @NgModule({

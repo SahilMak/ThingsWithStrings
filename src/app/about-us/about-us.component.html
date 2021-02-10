@@ -1,1 +1,41 @@
-<p>about-us works!</p>
+<div class="main">
+  <div fxLayout="row" fxLayoutAlign="space-between center" id="about">
+    <p>
+      image goes here
+    </p>
+    <div>
+      <h2 color="primary">
+        About Us
+      </h2>
+      <p>
+        {{ aboutus }}
+      </p>
+    </div>
+  </div>
+
+  <div id="team">
+    <h2>
+      Team
+    </h2>
+    <mat-grid-list cols="6" rowHeight="1:1">
+      <mat-grid-tile *ngFor="let position of team_positions">
+        <mat-card class="team-card">
+          <mat-card-header>
+            <p>{{ team[position].name }}</p><br>
+            <p>{{ team[position].title }}</p>
+          </mat-card-header>
+          <img>
+        </mat-card>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </div>
+
+  <div id="contact">
+    <h2>
+      Contact Us
+    </h2>
+    <p>
+      {{ contactus }}
+    </p>
+  </div>
+</div>
