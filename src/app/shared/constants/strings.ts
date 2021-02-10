@@ -48,4 +48,4 @@ export const Management = {
   finance_manager: { name: '[Finance Manager name]', title: 'Finance Manager' }
 };
 
-export const ContactUs = 'Never speak to us. We don\'t care what you have to say. We\'re not real.';
+export const ContactUs = 'Never speak to us.';

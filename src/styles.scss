@@ -24,11 +24,19 @@ body {
     }
   }
 
+  .bold {
+    font-weight: bold;
+  }
+
   .clickable {
     cursor: pointer;
   }
 
   .main { //TODO: rename
-    margin: 5% 20%;
+    margin: 10% 20%;
+  }
+
+  .primary-text {
+    color: $primary;
   }
 }
