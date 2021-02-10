@@ -1,0 +1,9 @@
+@mixin footer-theme($color) { //! edit
+  .toggled-color {
+    color: $color !important;
+  }
+}
+
+#team {
+  margin: 10% 0;
+}
