@@ -4,6 +4,22 @@
   }
 }
 
+.about-img {
+  max-width: 50%;
+}
+
 #team {
   margin: 10% 0;
+
+  .team-card {
+    height: 80%;
+
+    .team-img {
+      display: block;
+      height: 40%;
+      margin: 0 auto;
+      max-width: 100%;
+      object-fit: contain;
+    }
+  }
 }

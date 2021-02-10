@@ -1,39 +1,43 @@
 <div class="main">
   <div fxLayout="row" fxLayoutAlign="space-between center" id="about">
-    <p>
-      image goes here
-    </p>
     <div>
-      <h2 color="primary">
+      <img src="/assets/coming_soon.jpg" class="about-img">
+    </div>
+    <div>
+      <h1 class="bold mat-h1 primary-text">
         About Us
-      </h2>
-      <p>
+      </h1>
+      <p class="mat-body-2">
         {{ aboutus }}
       </p>
     </div>
   </div>
 
   <div id="team">
-    <h2>
+    <h1 class="bold mat-h1 primary-text">
       Team
-    </h2>
-    <mat-grid-list cols="6" rowHeight="1:1">
+    </h1>
+    <mat-grid-list cols="3" rowHeight="1:1">
       <mat-grid-tile *ngFor="let position of team_positions">
         <mat-card class="team-card">
           <mat-card-header>
-            <p>{{ team[position].name }}</p><br>
-            <p>{{ team[position].title }}</p>
+            <mat-card-title>
+              <p>{{ team[position].name }}</p><br>
+            </mat-card-title>
+            <mat-card-subtitle>
+              <p class="bold">{{ team[position].title }}</p>
+            </mat-card-subtitle>
           </mat-card-header>
-          <img>
+          <img mat-card-image src="/assets/coming_soon2.jpg" class="team-img">
         </mat-card>
       </mat-grid-tile>
     </mat-grid-list>
   </div>
 
   <div id="contact">
-    <h2>
+    <h1 class="bold mat-h1 primary-text">
       Contact Us
-    </h2>
+    </h1>
     <p>
       {{ contactus }}
     </p>
