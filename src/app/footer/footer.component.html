@@ -2,7 +2,7 @@
   <mat-toolbar-row>
     <div fxLayout="row">
       <div *ngFor="let value of footerLinks; last as isLast">
-        <a mat-button href="javascript:void(0)" class="toggled-color" [ngClass]="{ 'right-margin': !isLast }">
+        <a mat-button routerLink="/about" [fragment]="value" class="toggled-color" [ngClass]="{ 'right-margin': !isLast }">
           {{ value | titlecase }}
         </a>
       </div>

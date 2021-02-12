@@ -4,15 +4,18 @@
   }
 }
 
+mat-divider {
+  margin: 10% 0;
+}
+
 .about-img {
   max-width: 50%;
 }
 
 #team {
-  margin: 10% 0;
-
   .team-card {
     height: 80%;
+    margin: 0 5%;
 
     .team-img {
       display: block;
