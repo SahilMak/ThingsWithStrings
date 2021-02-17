@@ -12,7 +12,7 @@
           <button mat-menu-item *ngFor="let sub of subCategories[category]">
             {{ sub | titlecase }}
           </button>
-          <button mat-menu-item>
+          <button mat-menu-item [routerLink]="'/' + category">
             <b>
               View All
             </b>
