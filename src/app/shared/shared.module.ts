@@ -9,13 +9,16 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatTooltipModule } from '@angular/material/tooltip';
 
+import { SidebarComponent } from './sidebar/sidebar.component';
+
 
 @NgModule({
-  declarations: [],
+  declarations: [SidebarComponent],
   exports: [
     FlexLayoutModule,
     MatButtonModule,
@@ -26,6 +29,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatInputModule,
     MatMenuModule,
+    MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
     MatTooltipModule
@@ -41,6 +45,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
     MatIconModule,
     MatInputModule,
     MatMenuModule,
+    MatSidenavModule,
     MatSlideToggleModule,
     MatToolbarModule,
     MatTooltipModule
