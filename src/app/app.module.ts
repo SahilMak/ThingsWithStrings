@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -21,7 +22,6 @@ import { OrchestralModule } from './orchestral/orchestral.module';
 import { SharedModule } from '../app/shared/shared.module';
 import { WorldModule } from './world/world.module';
 import { environment } from '../environments/environment';
-import { ServiceWorkerModule } from '@angular/service-worker';
 
 
 @NgModule({

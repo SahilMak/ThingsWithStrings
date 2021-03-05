@@ -1,0 +1,5 @@
+<ngx-auth-firebaseui
+  [providers]="[providers.ANONYMOUS, providers.EmailAndPassword, providers.Facebook, providers.Google, providers.Microsoft, providers.PhoneNumber, providers.Twitter]"
+  (onSuccess)="getUserInfo($event)"
+  (onError)="printError($event)">
+</ngx-auth-firebaseui>
