@@ -4,10 +4,11 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
 import { SharedModule } from '../shared/shared.module';
+import { AuthDialogComponent } from './auth-dialog/auth-dialog.component';
 
 
 @NgModule({
-  declarations: [ HeaderComponent ],
+  declarations: [ HeaderComponent, AuthDialogComponent ],
   exports: [ HeaderComponent ],
   imports: [
     CommonModule,

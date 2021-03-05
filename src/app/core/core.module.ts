@@ -1,6 +1,7 @@
 import { NgModule, Optional, SkipSelf } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { AuthService } from './services/auth.service';
 import { DarkModeService } from './services/dark-mode.service';
 import { SidebarService } from './services/sidebar.service';
 
@@ -11,6 +12,7 @@ import { SidebarService } from './services/sidebar.service';
     CommonModule
   ],
   providers: [
+    AuthService,
     DarkModeService,
     SidebarService
   ]
