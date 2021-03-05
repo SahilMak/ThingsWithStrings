@@ -37,9 +37,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   openAuthDialog(): void {
     if (!this.isUserLoggedIn) {
-      const dialogRef = this.dialog.open(AuthDialogComponent, {
-        width: '200px'
-      });
+      const dialogRef = this.dialog.open(AuthDialogComponent);
       dialogRef.afterClosed().pipe(takeUntil(this.unsubscribe)).subscribe((info) => {
         if (info) {
           this.authService.userInfo.next(info);

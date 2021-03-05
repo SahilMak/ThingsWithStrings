@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialogRef } from '@angular/material/dialog';
+import { AuthProvider } from 'ngx-auth-firebaseui';
 
 @Component({
   selector: 'app-auth-dialog',
@@ -7,9 +9,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AuthDialogComponent implements OnInit {
 
-  constructor() { }
+  providers = AuthProvider;
+
+  constructor(public dialogRef: MatDialogRef<AuthDialogComponent>) { }
 
   ngOnInit(): void {
+  }
+
+  getUserInfo(data: any): void {
+    console.log(data);
+  }
+
+  printError(error: any): void {
+    console.log(error);
   }
 
 }
